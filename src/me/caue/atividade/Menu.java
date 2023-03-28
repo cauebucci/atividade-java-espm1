@@ -129,9 +129,10 @@ public class Menu {
 		int n = 0;
 		if(!ns.matches("[0-9]+")) {
 			showMessageDialog(getRootFrame(), "Número inválido!");
+			abrir();
 		}else if(!Util.BilheteExistente(ns)) {
 			showMessageDialog(getRootFrame(), "Esse bilhete não existe!");
-
+			abrir();
 		}else {
 			n = parseInt(ns);
 			boolean programa = true;
